@@ -75,6 +75,7 @@ body {
 /* Header .........................*/
 .header {
    padding: 20px 0px;
+   position: relative;
 }
 
 .header__iner {
@@ -88,6 +89,46 @@ body {
    display: flex;
    align-items: center;
    justify-content: space-between;
+}
+
+/* burger....... */
+/* burger........ */
+.burger {
+   display: none;
+
+   background-color: transparent;
+   border: none;
+
+   padding: 10px 1px;
+   cursor: pointer;
+}
+
+.burger-item {
+   display: block;
+   position: relative;
+
+   width: 40px;
+   height:2px ;
+
+   background-color:#fff ;
+}
+
+.burger-item::before,
+.burger-item::after {
+   content: " ";
+   position: absolute;
+   left: 0;
+   width: 40px;
+   height:2px ;
+   background-color:#fff
+}
+
+.burger-item::before {
+   top: -8px;
+}
+
+.burger-item::after {
+   bottom: -8px;
 }
 
 .header__menu {
@@ -140,6 +181,7 @@ body {
    -ms-transition: all 0.3s;
    -o-transition: all 0.3s;
    opacity: 1;
+   z-index: 9;
 }
 
 .btn:hover {
@@ -743,8 +785,8 @@ body {
       max-width: 950px;
    }
    .left__box-people {
-   bottom: -80px;
-   left: 0;
+      bottom: -80px;
+      left: 0;
    }
 
    .learn__iner__box {
@@ -755,11 +797,12 @@ body {
       margin-bottom: 20px;
       margin-right: 25px;
    }
+
    .skills {
       padding-bottom: 100px;
   }
-  .benefits {
-   padding-bottom: 50px;
+   .benefits {
+      padding-bottom: 50px;
    }
    .benefits__iner {
       display: block;
@@ -775,20 +818,118 @@ body {
       margin-right: 0;
       margin: 0 auto;
   }
-  .benefits__info-title {
-   margin-bottom: 15px;
-   margin-top: 10px;
+   .benefits__info-title {
+      margin-bottom: 15px;
+      margin-top: 10px;
    }
    .benefits__info-text {
-   max-width: 500px;
-   margin: 0 auto;
+      max-width: 500px;
+      margin: 0 auto;
   }
-  .footer__social-box {
-   margin-bottom: 75px;
+   .footer__social-box {
+      margin-bottom: 75px;
   }
-
-
 }
+
+@media (max-width:895px) {
+   .header__menu {
+      margin-left: 0px;
+   }
+   .left__box-people {
+      width: 100%;
+   }
+   .list-item + .list-item {
+      margin-left: 0;
+   }
+   .list-item {
+      padding: 10px;
+   }
+   ul.menu-list {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      padding-top: 90px;
+      padding-bottom: 30px;
+      background: #010203;
+      width: 100%;
+      z-index: 1;
+      transition: all 0.5s;
+      transform: translateY(-150%);
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      -webkit-transform: translateY(-150%);
+      -moz-transform: translateY(-150%);
+      -ms-transform: translateY(-150%);
+      -o-transform: translateY(-150%);
+   }
+
+   .menu__list.active {
+      transform: translateY(0);
+   }
+   .header__logo {
+      display: none;
+   }
+   .burger {
+      display: block;
+      z-index: 2;
+   }
+   .header__btn {
+      z-index: 2;
+   }
+}
+
+@media (max-width:576px)  {
+   .skills__title {
+      font-size: 38px;
+   }
+   .skills__subtitle {
+      font-size: 16px;
+      margin-bottom: 30px;
+   }
+}
+@media (max-width:434px) {
+   .left__box-people {
+
+       min-width: 200px;
+   }
+   .people__img {display: none;
+   }
+   .skills__box {
+      display: block;
+      text-align: center;
+   }
+   .skills__input {
+      padding: 15px 52px 15px 15px;
+   }
+   .skills__input, .skills__input::placeholder {
+      font-size: 14px;
+   }
+   .benefits {
+      padding-top: 50px;
+   }
+   .learn {
+      padding-top: 25px;
+   }
+   .skills__title {
+      font-size: 30px;
+   }
+   .skills__btn {
+      width: 35px;
+      height: 36px;
+   }
+   .skills__subtitle {
+      font-size: 13px;
+   }
+   .skills__form {
+      margin-bottom: 30px;
+   }
+}
+
 
 
 
