@@ -792,6 +792,7 @@ body {
    .learn__iner__box {
       flex-wrap: wrap;
       justify-content: center;
+      margin-left: 25px;
    }
    .learn-item {
       margin-bottom: 20px;
